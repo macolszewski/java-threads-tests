@@ -1,7 +1,6 @@
 package threads;
 
-import threads.excersices.CounterRunnable;
-import threads.excersices.CounterThread;
+import threads.excersices.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,13 +41,20 @@ public class App
 //        t3.start();
 //        t4.start();
 
-        Thread second = new CounterThread(20);
-        Thread first = new Thread(new CounterRunnable(20));
+//        Thread second = new CounterThread(20);
+//        Thread first = new Thread(new CounterRunnable(20));
+//
+//        first.start();
+//        second.start();
+//        Thread.sleep(10000);
+//        second.interrupt();
 
-        first.start();
-        second.start();
-        Thread.sleep(10000);
-        second.interrupt();
+        Table obj = new Table();
+        //only one object
+        ActionThread1 t1 = new ActionThread1(obj);
+        ActionThread2 t2 = new ActionThread2(obj);
+        t1.start();
+        t2.start();
 
 
     }
