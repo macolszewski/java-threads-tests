@@ -6,13 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args ) throws InterruptedException {
+public class App {
+    public static void main(String[] args) throws InterruptedException {
 
 //        InterruptedExceptionThread interruptedExceptionThread = new InterruptedExceptionThread();
 //        interruptedExceptionThread.start();
@@ -41,6 +36,8 @@ public class App
 //        t3.start();
 //        t4.start();
 
+//        ___________________________________________________
+
 //        Thread second = new CounterThread(20);
 //        Thread first = new Thread(new CounterRunnable(20));
 //
@@ -55,6 +52,16 @@ public class App
         ActionThread2 t2 = new ActionThread2(obj);
         t1.start();
         t2.start();
+
+//        Tor tor = new Tor();
+//
+//        Train trainPKP = new Train(tor);
+//        trainPKP.setName("Pociąg osobowy");
+//        Train trainCargo = new Train(tor);
+//        trainCargo.setName("Pociąg towarowy");
+//
+//        trainCargo.start();
+//        trainPKP.start();
 
 
     }
