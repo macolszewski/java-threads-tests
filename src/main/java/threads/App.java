@@ -1,6 +1,8 @@
 package threads;
 
 import threads.excersices.*;
+import threads.excersices.newexcercises.IncrementRunnable;
+import threads.excersices.newexcercises.IncrementThread;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,12 +48,12 @@ public class App {
 //        Thread.sleep(10000);
 //        second.interrupt();
 
-        Table obj = new Table();
-        //only one object
-        ActionThread1 t1 = new ActionThread1(obj);
-        ActionThread2 t2 = new ActionThread2(obj);
-        t1.start();
-        t2.start();
+//        Table obj = new Table();
+//        //only one object
+//        ActionThread1 t1 = new ActionThread1(obj);
+//        ActionThread2 t2 = new ActionThread2(obj);
+//        t1.start();
+//        t2.start();
 
 //        Tor tor = new Tor();
 //
@@ -62,6 +64,15 @@ public class App {
 //
 //        trainCargo.start();
 //        trainPKP.start();
+
+        Integer integer = new Integer(10);
+
+        Thread incrementThread = new IncrementThread(integer);
+        Thread incrementRunnable = new Thread(new IncrementRunnable(integer));
+
+
+        incrementThread.start();
+        incrementRunnable.start();
 
 
     }

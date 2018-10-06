@@ -15,13 +15,10 @@ public class Bank {
                 customer.deposite(10);
             }
         }).start();
-        for (int i = 0; i<10;i++) {
+        for (int i = 0; i<15;i++) {
             customer.deposite(15);
         }
-        System.out.println("test");
 
-        for (int i = 0; i<10;i++) {
-            customer.deposite(10);
-        }
+
     }
 }
